@@ -5,31 +5,31 @@ VALUES
 (2, 'Maria Clara', 5600.00),
 (3, 'Antunes Silveira', 3520.00),
 (4, 'Silvio Prado', 3120.00),
-(5, 'AndrÈ Souza', 4800.00);
+(5, 'AndrÔøΩ Souza', 4800.00);
 
 SELECT * FROM Funcionarios;
 
 SELECT NOME, SALARIO FROM Funcionarios;
 
-SELECT NOME AS 'NOME COMPLETO DO FUNCION¡RIO' FROM Funcionarios;
+SELECT NOME AS 'NOME COMPLETO DO FUNCIONÔøΩRIO' FROM Funcionarios;
 
 SELECT * FROM Funcionarios WHERE SALARIO > 4000;
 
--- NOVO CADASTRO - EXERCÕCIO 2
+-- NOVO CADASTRO - EXERCÔøΩCIO 2
 
 INSERT INTO Funcionarios
 (COD_FUNCIONARIO, NOME, SALARIO)
 VALUES
-(6, 'JosÈ Antonio', 2500.00),
+(6, 'JosÔøΩ Antonio', 2500.00),
 (7, 'Dias Davila', 6500.00),
-(8, 'AndrÈ Souza', 1850.00),
+(8, 'AndrÔøΩ Souza', 1850.00),
 (9, 'Marcos Andrades', 3500.00),
 (10, 'Paula Santos', 4200.00);
 
 SELECT * FROM Funcionarios;
 
 
--- DATA QUERY LANGUAGE (DQL) - EXERCÕCIO 3
+-- DATA QUERY LANGUAGE (DQL) - EXERCÔøΩCIO 3
 
 USE RHSENAI 
 SELECT * FROM Funcionarios;
@@ -54,5 +54,12 @@ SELECT * FROM Funcionarios WHERE COD_FUNCIONARIO <= 5 OR SALARIO >= 6000;
 SELECT * FROM Funcionarios WHERE NOME LIKE 'A%';
 SELECT * FROM Funcionarios WHERE NOME LIKE 'Maria Clara';
 
-SELECT Funcionarios SUM(SALARIO) AS 'Total de sal·rios da folha', 
-FROM Funcionarios;
+SELECT SUM(SALARIO) AS 'TOTAL DE SAL√ÅRIOS DA FOLHA' FROM Funcionarios;
+
+SELECT SUM(SALARIO) AS 'TOTAL DE SAL√ÅRIOS DA FOLHA', AVG(SALARIO) 'M√âDIA DE SAL√ÅRIOS', MAX(SALARIO) AS 'MAIOR SAL√ÅRIO', MIN(SALARIO) AS 'MENOR SAL√ÅRIO', COUNT(COD_FUNCIONARIO) AS 'QTDE FUNCION√ÅRIOS CADASTRADOS' FROM Funcionarios;
+
+SELECT 
+2+6 AS 'SOMA',
+20-15 AS 'SUBTRA√á√ÉO',
+2*4 AS 'MULTIPLICA√á√ÉO',
+8/2 AS 'DIVIS√ÉO';
