@@ -26,3 +26,11 @@ Dessa vez usaremos comandos do tipo DDL vis script
 5. ALTERANDO TIPO DE UM CAMPO PARA PRIMARY KEY
 > ALTER TABLE *nome_tabela*
 > ADD CONSTRAINT *PK_COD* PRIMARY KEY *nome_campo*
+
+-------------------------------------------------------------------------------------------------------------------------
+
+# CRIANDO OUTRA TABELA
+
+Agora vamos criar uma tabela *Cargos* e relacionar com a já existente *Funcionarios*
+
+A FK (Foreign Key) da nossa tabela *Cargos* será o campo *COD_CARGO*
