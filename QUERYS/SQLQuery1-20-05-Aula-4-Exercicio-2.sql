@@ -1,0 +1,38 @@
+ALTER TABLE Funcionarios
+ADD CONSTRAINT fk_cargo
+FOREIGN KEY (COD_CARGO) REFERENCES CARGOS (COD_CARGO);
+
+SELECT * FROM Cargos;
+
+SELECT * FROM Funcionarios;
+
+INSERT INTO Funcionarios (COD_FUNC, NOME, SALARIO, DATA_NASCIMENTO, SEXO, ENDERECO, COD_CARGO)
+VALUES
+(11, 'Marcondes Silveira', 6500.00, NULL, 'MASCULINO', 'R. UBIRAJA - 520', 6);
+
+INSERT INTO Funcionarios (COD_FUNC, NOME, SALARIO, DATA_NASCIMENTO, SEXO, ENDERECO, COD_CARGO)
+VALUES
+(12, 'Marcondes Silveira', 6500.00, NULL, 'MASCULINO', 'R. UBIRAJA - 520', 900);
+
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1985/12/21', SEXO = 'Masculino', ENDERECO = 'Rua das Flores, 896 - Arujá', COD_CARGO=1 WHERE COD_FUNC = 1;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1992/09/13', SEXO = 'Feminino', ENDERECO = 'Rua Gardenia, 3600 - São Paulo', COD_CARGO=4 WHERE COD_FUNC = 2;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1983/04/21', SEXO = 'Masculino', ENDERECO = 'Rua das Rosas, 560 - Arujá', COD_CARGO=2 WHERE COD_FUNC = 3;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1997/08/12', SEXO = 'Masculino', ENDERECO = 'Rua Hermenegildo, 102 - Guarulhos', COD_CARGO=1 WHERE COD_FUNC = 4;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '2002/04/06', SEXO = 'Masculino', ENDERECO = 'Rua Serra, 56 - Guarulhos', COD_CARGO=2 WHERE COD_FUNC = 5;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1996/11/25', SEXO = 'Masculino', ENDERECO = 'Rua Neto Brito, 89 - São Paulo', COD_CARGO=1 WHERE COD_FUNC = 6;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1994/02/02', SEXO = 'Masculino', ENDERECO = 'Rua das Elenice, 78 - Guarulhos', COD_CARGO=5 WHERE COD_FUNC = 7;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1980/06/23', SEXO = 'Masculino', ENDERECO = 'Rua das Flores, 1000 - São Paulo', COD_CARGO=4 WHERE COD_FUNC = 8;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1989/07/20', SEXO = 'Masculino', ENDERECO = 'Rua Grande Sul, 40 - São Paulo', COD_CARGO=3 WHERE COD_FUNC = 9;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1990/06/12', SEXO = 'Feminino', ENDERECO = 'Avenida José Teodoro, 40 - Arujá', COD_CARGO=2 WHERE COD_FUNC = 10;
+UPDATE Funcionarios SET DATA_NASCIMENTO = '1990/08/19', SEXO = 'Masculino', ENDERECO = 'Avenida Barbacena, 77 - Arujá', COD_CARGO=6 WHERE COD_FUNC = 11;
+
+SELECT * FROM Funcionarios WHERE SEXO like 'Masculino';
+
+SELECT SUM(SALARIO) AS 'VALOR TOTAL', SEXO FROM Funcionarios GROUP BY SEXO;
+
+SELECT SUM(SALARIO) AS 'VALOR TOTAL', SEXO FROM Funcionarios WHERE SEXO like 'Masculino' GROUP BY SEXO;
+
+SELECT SUM(SALARIO) AS 'VALOR TOTAL', SEXO FROM Funcionarios WHERE SEXO like 'Feminino' GROUP BY SEXO;
+
+SELECT AVG(SALARIO), SEXO FROM Funcionarios WHERE SEXO like 'Masculino' GROUP BY SEXO;
+
