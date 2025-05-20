@@ -8,7 +8,7 @@ Após criarmos nossas duas tabelas: *Funcionarios* e *Cargos*, vamos relacioná-
 
 
 ## Códigos DDL usados:
-*Adicionando chave estrangeira na nossa tabela **Cargos** *
+*Adicionando chave estrangeira na nossa tabela* **Cargos**
 > ALTER TABLE Funcionarios
 > ADD CONSTRAINT fk_cargo
 > FOREIGN KEY (COD_CARGO) REFERENCES CARGOS (COD_CARGO);
