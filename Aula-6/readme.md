@@ -6,3 +6,8 @@ Usando as nossas duas tabelas criadas e relacionadas vamos fazer um *select* por
 
 - Claro, que podemos ligar as tabelas por outros campos e não necessariamente por FK e PK, porém, para aproveitar a didática das tabelas criadas, utilizei FK e PK.
   - Os campos devem apenas estar relacionados para que possam ser usados no INNER JOIN
+
+
+# EXPORTAÇÃO
+
+Exportar as tabelas é mais fácil que podemos imaginar. Veremos como no PDF anexado a aula.
